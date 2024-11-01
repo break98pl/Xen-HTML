@@ -348,8 +348,6 @@
 				ARCHS = (
 					arm64e,
 					arm64,
-					armv7s,
-					armv7,
 				);
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
@@ -377,8 +375,6 @@
 				ARCHS = (
 					arm64e,
 					arm64,
-					armv7s,
-					armv7,
 				);
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;

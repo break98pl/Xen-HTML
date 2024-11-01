@@ -2056,12 +2056,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = (
-					armv7,
-					armv7s,
 					arm64,
 					arm64e,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
@@ -2081,27 +2080,28 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include/**";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
 				LLVM_LTO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-Wl,-segalign,4000";
 				PRODUCT_NAME = XenHTML_9to12;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SIMJECT = NO;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				iOSOpenDevBuildPackageOnAnyBuild = YES;
+				THEOS = /Users/beesmacprom1/theos;
+				VALID_ARCHS = "arm64 arm64e";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
 				iOSOpenDevDevice = "";
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = NO;
-				iOSOpenDevPath = /opt/iOSOpenDev;
 				iOSOpenDevRespringOnInstall = NO;
-				iOSOpenDevUsePackageVersionPList = YES;
+				iOSOpenDevUsePackageVersionPList = NO;
 			};
 			name = Debug;
 		};
@@ -2109,12 +2109,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = (
-					armv7,
-					armv7s,
 					arm64,
 					arm64e,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
@@ -2130,26 +2129,27 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include/**";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
 				LLVM_LTO = YES;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-Wl,-segalign,4000";
 				PRODUCT_NAME = XenHTML_9to12;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SIMJECT = NO;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				iOSOpenDevBuildPackageOnAnyBuild = YES;
+				THEOS = /Users/beesmacprom1/theos;
+				VALID_ARCHS = "arm64 arm64e";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
 				iOSOpenDevDevice = "";
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = NO;
-				iOSOpenDevPath = /opt/iOSOpenDev;
 				iOSOpenDevRespringOnInstall = NO;
-				iOSOpenDevUsePackageVersionPList = YES;
+				iOSOpenDevUsePackageVersionPList = NO;
 			};
 			name = Release;
 		};
@@ -2259,11 +2259,10 @@
 			buildSettings = {
 				ARCHS = (
 					arm64,
-					armv7,
-					armv7s,
 					arm64e,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2273,7 +2272,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
@@ -2282,12 +2281,19 @@
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = "-Wl,-segalign,4000";
 				PRODUCT_NAME = XenHTML_Loader;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SIMJECT = NO;
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				THEOS = /opt/theos;
+				THEOS = /Users/beesmacprom1/theos;
+				VALID_ARCHS = "arm64 arm64e";
 				WARNING_CFLAGS = "";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = NO;
+				iOSOpenDevRespringOnInstall = NO;
+				iOSOpenDevUsePackageVersionPList = NO;
 			};
 			name = Debug;
 		};
@@ -2296,11 +2302,10 @@
 			buildSettings = {
 				ARCHS = (
 					arm64,
-					armv7,
-					armv7s,
 					arm64e,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2309,7 +2314,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
@@ -2317,12 +2322,19 @@
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = "-Wl,-segalign,4000";
 				PRODUCT_NAME = XenHTML_Loader;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SIMJECT = NO;
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				THEOS = /opt/theos;
+				THEOS = /Users/beesmacprom1/theos;
+				VALID_ARCHS = "arm64 arm64e";
 				WARNING_CFLAGS = "";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = NO;
+				iOSOpenDevRespringOnInstall = NO;
+				iOSOpenDevUsePackageVersionPList = NO;
 			};
 			name = Simulator;
 		};
@@ -2331,11 +2343,10 @@
 			buildSettings = {
 				ARCHS = (
 					arm64,
-					armv7,
-					armv7s,
 					arm64e,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2344,7 +2355,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/lib",
@@ -2352,12 +2363,19 @@
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = "-Wl,-segalign,4000";
 				PRODUCT_NAME = XenHTML_Loader;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SIMJECT = NO;
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				THEOS = /opt/theos;
+				THEOS = /Users/beesmacprom1/theos;
+				VALID_ARCHS = "arm64 arm64e";
 				WARNING_CFLAGS = "";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = NO;
+				iOSOpenDevRespringOnInstall = NO;
+				iOSOpenDevUsePackageVersionPList = NO;
 			};
 			name = Release;
 		};
@@ -2366,12 +2384,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = (
-					armv7,
 					arm64,
 					arm64e,
-					armv7s,
-					i386,
-					x86_64,
 				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -2393,7 +2407,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -2401,7 +2415,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2413,12 +2427,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = (
-					armv7,
 					arm64,
 					arm64e,
-					armv7s,
-					i386,
-					x86_64,
 				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -2440,7 +2450,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -2448,7 +2458,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2460,12 +2470,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = (
-					armv7,
 					arm64,
 					arm64e,
-					armv7s,
-					i386,
-					x86_64,
 				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -2487,7 +2493,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -2495,7 +2501,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2510,6 +2516,7 @@
 					arm64e,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2528,11 +2535,11 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Wl,-segalign,4000";
 				PRODUCT_NAME = XenHTML_13;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SIMJECT = NO;
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				THEOS = /opt/theos;
+				THEOS = /Users/beesmacprom1/theos;
 				VALID_ARCHS = "arm64 arm64e";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
@@ -2551,6 +2558,7 @@
 					arm64e,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2568,11 +2576,11 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Wl,-segalign,4000";
 				PRODUCT_NAME = XenHTML_13;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SIMJECT = NO;
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				THEOS = /opt/theos;
+				THEOS = /Users/beesmacprom1/theos;
 				VALID_ARCHS = "arm64 arm64e";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
@@ -2591,6 +2599,7 @@
 					arm64e,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -2608,11 +2617,11 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-Wl,-segalign,4000";
 				PRODUCT_NAME = XenHTML_13;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SIMJECT = NO;
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				THEOS = /opt/theos;
+				THEOS = /Users/beesmacprom1/theos;
 				VALID_ARCHS = "arm64 arm64e";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
@@ -2629,13 +2638,12 @@
 				ARCHS = (
 					arm64,
 					arm64e,
-					armv7,
-					armv7s,
 				);
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_STYLE = Automatic;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
 			};
 			name = Debug;
@@ -2646,12 +2654,11 @@
 				ARCHS = (
 					arm64,
 					arm64e,
-					armv7,
-					armv7s,
 				);
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
 			};
 			name = Simulator;
@@ -2662,12 +2669,11 @@
 				ARCHS = (
 					arm64,
 					arm64e,
-					armv7,
-					armv7s,
 				);
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
 			};
 			name = Release;
@@ -2729,12 +2735,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = (
-					armv7,
-					armv7s,
 					arm64,
 					arm64e,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
@@ -2754,26 +2759,27 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include/**";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
 				LLVM_LTO = YES;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-Wl,-segalign,4000";
 				PRODUCT_NAME = XenHTML_9to12;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SIMJECT = NO;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				iOSOpenDevBuildPackageOnAnyBuild = YES;
+				THEOS = /Users/beesmacprom1/theos;
+				VALID_ARCHS = "arm64 arm64e";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
 				iOSOpenDevDevice = "";
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = NO;
-				iOSOpenDevPath = /opt/iOSOpenDev;
 				iOSOpenDevRespringOnInstall = NO;
-				iOSOpenDevUsePackageVersionPList = YES;
+				iOSOpenDevUsePackageVersionPList = NO;
 			};
 			name = Simulator;
 		};
@@ -2782,8 +2788,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = (
-					armv7,
-					armv7s,
 					arm64,
 					arm64e,
 				);
@@ -2801,7 +2805,7 @@
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
 				INFOPLIST_FILE = Preferences/Info.plist;
 				INSTALL_PATH = /Library/PreferenceBundles;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/lib",
 					/opt/iOSOpenDev/lib,
@@ -2811,7 +2815,7 @@
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.matchstic.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = XenHTMLPrefs;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SIMJECT = NO;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = all;
@@ -2836,8 +2840,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = (
-					armv7,
-					armv7s,
 					arm64,
 					arm64e,
 				);
@@ -2855,7 +2857,7 @@
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
 				INFOPLIST_FILE = Preferences/Info.plist;
 				INSTALL_PATH = /Library/PreferenceBundles;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/lib",
 					/opt/iOSOpenDev/lib,
@@ -2865,7 +2867,7 @@
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.matchstic.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = XenHTMLPrefs;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SIMJECT = NO;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = all;
@@ -2890,8 +2892,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = (
-					armv7,
-					armv7s,
 					arm64,
 					arm64e,
 				);
@@ -2905,7 +2905,7 @@
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/include";
 				INFOPLIST_FILE = Preferences/Info.plist;
 				INSTALL_PATH = /Library/PreferenceBundles;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/lib",
 					/opt/iOSOpenDev/lib,
@@ -2915,7 +2915,7 @@
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.matchstic.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = XenHTMLPrefs;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SIMJECT = NO;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = all;

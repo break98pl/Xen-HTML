@@ -267,10 +267,9 @@
 				ARCHS = (
 					arm64,
 					arm64e,
-					armv7,
-					armv7s,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -281,11 +280,14 @@
 				GCC_PREFIX_HEADER = "WebGL/WebGL-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../include";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../lib";
 				OTHER_LDFLAGS = "-Wl,-segalign,4000";
 				PRODUCT_NAME = XenHTML_WebGL;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
+				SIMJECT = NO;
+				THEOS = /Users/beesmacprom1/theos;
+				VALID_ARCHS = "arm64 arm64e";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
 				iOSOpenDevDevice = "";
@@ -302,10 +304,9 @@
 				ARCHS = (
 					arm64,
 					arm64e,
-					armv7,
-					armv7s,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -316,11 +317,14 @@
 				GCC_PREFIX_HEADER = "WebGL/WebGL-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../include";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../lib";
 				OTHER_LDFLAGS = "-Wl,-segalign,4000";
 				PRODUCT_NAME = XenHTML_WebGL;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
+				SIMJECT = NO;
+				THEOS = /Users/beesmacprom1/theos;
+				VALID_ARCHS = "arm64 arm64e";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
 				iOSOpenDevDevice = "";

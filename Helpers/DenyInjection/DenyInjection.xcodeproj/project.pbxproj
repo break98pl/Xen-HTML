@@ -239,10 +239,9 @@
 				ARCHS = (
 					arm64,
 					arm64e,
-					armv7,
-					armv7s,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -254,15 +253,17 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_LDFLAGS = "-Wl,-segalign,4000";
 				PRODUCT_NAME = AAA_XenHTML_DenyInjection;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SIMJECT = NO;
+				THEOS = /Users/beesmacprom1/theos;
+				VALID_ARCHS = "arm64 arm64e";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
 				iOSOpenDevDevice = 192.168.0.0;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = NO;
-				iOSOpenDevRespringOnInstall = YES;
-				iOSOpenDevUsePackageVersionPList = YES;
+				iOSOpenDevRespringOnInstall = NO;
+				iOSOpenDevUsePackageVersionPList = NO;
 			};
 			name = Debug;
 		};
@@ -272,10 +273,9 @@
 				ARCHS = (
 					arm64,
 					arm64e,
-					armv7,
-					armv7s,
 				);
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -287,15 +287,17 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_LDFLAGS = "-Wl,-segalign,4000";
 				PRODUCT_NAME = AAA_XenHTML_DenyInjection;
-				SDKROOT = iphoneos14.1;
+				SDKROOT = iphoneos;
 				SIMJECT = NO;
+				THEOS = /Users/beesmacprom1/theos;
+				VALID_ARCHS = "arm64 arm64e";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
 				iOSOpenDevDevice = 192.168.0.0;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = NO;
-				iOSOpenDevRespringOnInstall = YES;
-				iOSOpenDevUsePackageVersionPList = YES;
+				iOSOpenDevRespringOnInstall = NO;
+				iOSOpenDevUsePackageVersionPList = NO;
 			};
 			name = Release;
 		};
