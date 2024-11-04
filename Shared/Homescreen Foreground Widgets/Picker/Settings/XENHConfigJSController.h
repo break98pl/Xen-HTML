@@ -19,6 +19,7 @@
 #import <UIKit/UIKit.h>
 #import "XENHConfigJSCell.h"
 #import "../XENHHomescreenForegroundPickerDelegate.h"
+#import "XENHFallbackDelegate-Protocol.h"
 
 @interface XENHConfigJSController : UITableViewController <XENHConfigJSDelegate> {
     NSArray *_dataSource;
@@ -28,6 +29,7 @@
 
 @property (nonatomic, weak) id<XENHHomescreenForegroundPickerDelegate> delegate;
 @property (nonatomic, readwrite) BOOL fallbackState;
+@property (nonatomic, weak) id<XENHFallbackDelegate> fallbackDelegate;
 @property (nonatomic, readwrite) BOOL showCancel;
 
 @property (nonatomic, strong) NSString *widgetURL;

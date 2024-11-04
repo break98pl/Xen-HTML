@@ -22,6 +22,7 @@
 #import "XENHEditorPositioningController.h"
 #import "XENHPickerController.h"
 #import "XENHFallbackOnlyOptionsController.h"
+#import "XENHFallbackDelegate-Protocol.h"
 
 #import "../../../Shared/Configuration/XENDWidgetConfigurationDelegate.h"
 
