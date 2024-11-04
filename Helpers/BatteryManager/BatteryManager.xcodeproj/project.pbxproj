@@ -192,7 +192,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos\n/opt/iOSOpenDev/bin/iosod --arm64e-legacy-prebuild\n";
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

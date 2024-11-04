@@ -250,6 +250,8 @@
 		C9F770821C7A5B7F00C52880 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97FBD0A1BA8C86E00173993 /* CoreGraphics.framework */; };
 		C9F770831C7A5B8600C52880 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97FBD0C1BA8C88000173993 /* QuartzCore.framework */; };
 		C9F90F631C80B001008AB1D0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9606EEA1C20E204006C8917 /* WebKit.framework */; };
+		CDD088122CD894C0005FB848 /* XenHTML.mm in Sources */ = {isa = PBXBuildFile; fileRef = CDD088112CD894C0005FB848 /* XenHTML.mm */; };
+		CDD088142CD8953C005FB848 /* XenHTML.mm in Sources */ = {isa = PBXBuildFile; fileRef = CDD088132CD8953C005FB848 /* XenHTML.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -599,6 +601,8 @@
 		C9ED329D209D11F2001F0251 /* XENHFallbackOnlyOptionsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XENHFallbackOnlyOptionsController.m; sourceTree = "<group>"; };
 		C9ED32A0209D1290001F0251 /* XENHFallbackDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XENHFallbackDelegate-Protocol.h"; sourceTree = "<group>"; };
 		C9F770491C7A459900C52880 /* XenHTMLPrefs.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XenHTMLPrefs.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDD088112CD894C0005FB848 /* XenHTML.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = XenHTML.mm; sourceTree = "<group>"; };
+		CDD088132CD8953C005FB848 /* XenHTML.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = XenHTML.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1088,6 +1092,7 @@
 		C9715253236F88080021277B /* Tweak (iOS 13) */ = {
 			isa = PBXGroup;
 			children = (
+				CDD088112CD894C0005FB848 /* XenHTML.mm */,
 				C971525B236F88080021277B /* XenHTML.xm */,
 				C971531F236F96970021277B /* PrivateHeaders.h */,
 			);
@@ -1098,6 +1103,7 @@
 			isa = PBXGroup;
 			children = (
 				C971529C236F89DB0021277B /* XenHTML.xm */,
+				CDD088132CD8953C005FB848 /* XenHTML.mm */,
 			);
 			path = "Tweak (iOS 9 to 12)";
 			sourceTree = "<group>";
@@ -1448,11 +1454,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9715262236F88080021277B /* Build configuration list for PBXNativeTarget "Tweak (iOS 13)" */;
 			buildPhases = (
-				C971524A236F88080021277B /* ShellScript */,
+				C971524A236F88080021277B /* Run Script */,
 				C971524B236F88080021277B /* Sources */,
 				C971524C236F88080021277B /* Frameworks */,
 				C971524D236F88080021277B /* Headers */,
-				C9715317236F8F830021277B /* Copy to simject if needed */,
 			);
 			buildRules = (
 			);
@@ -1601,7 +1606,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos\n/opt/iOSOpenDev/bin/iosod --arm64e-legacy-prebuild\n";
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos\n";
 		};
 		C94A9F3D24140CFE0062CDCD /* Auto-generation */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1638,7 +1643,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos\n";
 		};
-		C971524A236F88080021277B /* ShellScript */ = {
+		C971524A236F88080021277B /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1647,13 +1652,14 @@
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos\n/opt/iOSOpenDev/bin/iosod --arm64e-legacy-prebuild\n";
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos\n";
 		};
 		C97152B8236F8B020021277B /* Copy Helpers and Preferences */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1671,7 +1677,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nbuiltpath=\"${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${CONTENTS_FOLDER_PATH}\"\n\n# TODO: Find ldid2 on user's path\n\necho \"Copying Preferences...\"\ncp \"$builtpath/XenHTMLPrefs.bundle/XenHTMLPrefs\" \"${PROJECT_DIR}/Deploy/Package/Library/PreferenceBundles/XenHTMLPrefs.bundle\"\ncp \"$builtpath/XenHTMLPrefs.bundle/Info.plist\" \"${PROJECT_DIR}/Deploy/Package/Library/PreferenceBundles/XenHTMLPrefs.bundle\"\n/opt/homebrew/bin/ldid -S \"${PROJECT_DIR}/Deploy/Package/Library/PreferenceBundles/XenHTMLPrefs.bundle/XenHTMLPrefs\"\n\necho \"Copying WebGL helper...\"\ncp \"$builtpath/XenHTML_WebGL.dylib\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries\"\ncp \"${PROJECT_DIR}/Helpers/WebGL/XenHTML_WebGL.plist\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries\"\n/opt/homebrew/bin/ldid -S \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML_WebGL.dylib\"\n\necho \"Copying BatteryManager helper...\"\ncp \"$builtpath/XenHTML_ZBatteryManager.dylib\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML\"\n/opt/homebrew/bin/ldid -S  \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML/XenHTML_ZBatteryManager.dylib\"\n\necho \"Copying WidgetInfo helper...\"\ncp \"$builtpath/XenHTML_WidgetInfo.dylib\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML\"\n/opt/homebrew/bin/ldid -S  \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML/XenHTML_WidgetInfo.dylib\"\n\necho \"Copying WidgetInfo daemon...\"\n\nmkdir -p \"${PROJECT_DIR}/Deploy/Package/usr/bin\"\nmkdir -p \"${PROJECT_DIR}/Deploy/Package/Library/LaunchDaemons\"\n\ncp \"$builtpath/widgetinfod\" \"${PROJECT_DIR}/Deploy/Package/usr/bin\"\ncp \"${PROJECT_DIR}/Helpers/WidgetInfo/Daemon/com.matchstic.widgetinfod.plist\" \"${PROJECT_DIR}/Deploy/Package/Library/LaunchDaemons/\"\n\n/opt/homebrew/bin/ldid -S\"${PROJECT_DIR}/Helpers/WidgetInfo/Daemon/entitlements.plist\" \"${PROJECT_DIR}/Deploy/Package/usr/bin/widgetinfod\"\n\necho \"Copying DenyInjection helper...\"\ncp \"$builtpath/AAA_XenHTML_DenyInjection.dylib\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries\"\ncp \"${PROJECT_DIR}/Helpers/DenyInjection/AAA_XenHTML_DenyInjection.plist\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries\"\n/opt/homebrew/bin/ldid -S  \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/AAA_XenHTML_DenyInjection.dylib\"\n\necho \"Copying Tweak (iOS 9 to 12)\"\ncp \"$builtpath/XenHTML_9to12.dylib\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML\"\n/opt/homebrew/bin/ldid -S  \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML/XenHTML_9to12.dylib\"\n\necho \"Copying Tweak (iOS 13)\"\ncp \"$builtpath/XenHTML_13.dylib\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML\"\n/opt/homebrew/bin/ldid -S  \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML/XenHTML_13.dylib\"\n\necho \"Copying Loader\"\ncp \"$builtpath/XenHTML_Loader.dylib\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries\"\n/opt/homebrew/bin/ldid -S  \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML_Loader.dylib\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nbuiltpath=\"${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/${CONTENTS_FOLDER_PATH}\"\n\n# TODO: Find ldid2 on user's path\n\necho \"Copying Preferences...\"\ncp \"$builtpath/XenHTMLPrefs.bundle/XenHTMLPrefs\" \"${PROJECT_DIR}/Deploy/Package/Library/PreferenceBundles/XenHTMLPrefs.bundle\"\ncp \"$builtpath/XenHTMLPrefs.bundle/Info.plist\" \"${PROJECT_DIR}/Deploy/Package/Library/PreferenceBundles/XenHTMLPrefs.bundle\"\n/opt/iOSOpenDev/bin/ldid2 -S \"${PROJECT_DIR}/Deploy/Package/Library/PreferenceBundles/XenHTMLPrefs.bundle/XenHTMLPrefs\"\n\necho \"Copying WebGL helper...\"\ncp \"$builtpath/XenHTML_WebGL.dylib\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries\"\ncp \"${PROJECT_DIR}/Helpers/WebGL/XenHTML_WebGL.plist\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries\"\n/opt/iOSOpenDev/bin/ldid2 -S \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML_WebGL.dylib\"\n\necho \"Copying BatteryManager helper...\"\ncp \"$builtpath/XenHTML_ZBatteryManager.dylib\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML\"\n/opt/iOSOpenDev/bin/ldid2 -S  \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML/XenHTML_ZBatteryManager.dylib\"\n\necho \"Copying WidgetInfo helper...\"\ncp \"$builtpath/XenHTML_WidgetInfo.dylib\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML\"\n/opt/iOSOpenDev/bin/ldid2 -S  \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML/XenHTML_WidgetInfo.dylib\"\n\necho \"Copying WidgetInfo daemon...\"\n\nmkdir -p \"${PROJECT_DIR}/Deploy/Package/usr/bin\"\nmkdir -p \"${PROJECT_DIR}/Deploy/Package/Library/LaunchDaemons\"\n\ncp \"$builtpath/widgetinfod\" \"${PROJECT_DIR}/Deploy/Package/usr/bin\"\ncp \"${PROJECT_DIR}/Helpers/WidgetInfo/Daemon/com.matchstic.widgetinfod.plist\" \"${PROJECT_DIR}/Deploy/Package/Library/LaunchDaemons/\"\n\n/opt/iOSOpenDev/bin/ldid2 -S\"${PROJECT_DIR}/Helpers/WidgetInfo/Daemon/entitlements.plist\" \"${PROJECT_DIR}/Deploy/Package/usr/bin/widgetinfod\"\n\necho \"Copying DenyInjection helper...\"\ncp \"$builtpath/AAA_XenHTML_DenyInjection.dylib\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries\"\ncp \"${PROJECT_DIR}/Helpers/DenyInjection/AAA_XenHTML_DenyInjection.plist\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries\"\n/opt/iOSOpenDev/bin/ldid2 -S  \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/AAA_XenHTML_DenyInjection.dylib\"\n\necho \"Copying Tweak (iOS 9 to 12)\"\ncp \"$builtpath/XenHTML_9to12.dylib\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML\"\n/opt/iOSOpenDev/bin/ldid2 -S  \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML/XenHTML_9to12.dylib\"\n\necho \"Copying Tweak (iOS 13)\"\ncp \"$builtpath/XenHTML_13.dylib\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML\"\n/opt/iOSOpenDev/bin/ldid2 -S  \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML/XenHTML_13.dylib\"\n\necho \"Copying Loader\"\ncp \"$builtpath/XenHTML_Loader.dylib\" \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries\"\n/opt/iOSOpenDev/bin/ldid2 -S  \"${PROJECT_DIR}/Deploy/Package/Library/MobileSubstrate/DynamicLibraries/XenHTML_Loader.dylib\"\n";
 		};
 		C97152BF236F8BFA0021277B /* Compile into deb */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1690,24 +1696,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/opt/iOSOpenDev/bin/iosod build -p \"${PROJECT_DIR}/Deploy/PackageVersion.plist\" \"${PROJECT_DIR}/Deploy/Package\" \"${PROJECT_DIR}/Packages\"\n";
-		};
-		C9715317236F8F830021277B /* Copy to simject if needed */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Copy to simject if needed";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ ${SIMJECT} = \"YES\" ]; then\n\necho \"Automating simject...\"\ncp \"${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\" /opt/simject\nfor dylib in /opt/simject/*.dylib; do ldid -S \"$dylib\"; done\nresim\n\nfi\n";
 		};
 		C9CD07F42252BADD006C94FF /* Copy for simject if needed */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1743,7 +1731,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/opt/iOSOpenDev/bin/iosod --arm64e-legacy-prebuild\n";
+			shellScript = "
+";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1753,6 +1742,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD088142CD8953C005FB848 /* XenHTML.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1822,6 +1812,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD088122CD894C0005FB848 /* XenHTML.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

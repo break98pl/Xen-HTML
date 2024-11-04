@@ -2624,9 +2624,9 @@ static BOOL launchCydiaForSource = NO;
 // See: https://github.com/WebKit/webkit/blob/master/Source/WebKit/UIProcess/WebsiteData/WebDeviceOrientationAndMotionAccessController.cpp
 // Also: https://github.com/WebKit/webkit/blob/master/Source/WebCore/dom/DeviceOrientationOrMotionPermissionState.h
 enum class DeviceOrientationOrMotionPermissionState : uint8_t { Granted, Denied, Prompt };
-%hookf(DeviceOrientationOrMotionPermissionState, "__ZNK6WebKit45WebDeviceOrientationAndMotionAccessController33cachedDeviceOrientationPermissionERKN7WebCore18SecurityOriginDataE", void *_this, void *originData) {
-    return DeviceOrientationOrMotionPermissionState::Granted;
-}
+//%hookf(DeviceOrientationOrMotionPermissionState, "__ZNK6WebKit45WebDeviceOrientationAndMotionAccessController33cachedDeviceOrientationPermissionERKN7WebCore18SecurityOriginDataE", void *_this, void *originData) {
+//    return DeviceOrientationOrMotionPermissionState::Granted;
+//}
 
 // Prevent double tap to scroll
 

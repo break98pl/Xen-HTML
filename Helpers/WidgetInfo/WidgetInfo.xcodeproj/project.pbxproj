@@ -29,6 +29,7 @@
 		C9A7A5E5248978A100319885 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A7A5E4248978A100319885 /* CoreFoundation.framework */; };
 		C9B351242465A7C200E531E1 /* MediaRemote.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B351202465A7C200E531E1 /* MediaRemote.tbd */; };
 		C9B3D709245E0756004D048E /* IOKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B3D705245E0756004D048E /* IOKit.tbd */; };
+		CDD088162CD89571005FB848 /* WidgetInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = CDD088152CD89571005FB848 /* WidgetInfo.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		C9B351202465A7C200E531E1 /* MediaRemote.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = MediaRemote.tbd; path = ../../deps/libwidgetinfo/daemon/frameworks/MediaRemote.tbd; sourceTree = "<group>"; };
 		C9B3D705245E0756004D048E /* IOKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = IOKit.tbd; path = ../../deps/libwidgetinfo/daemon/frameworks/IOKit.tbd; sourceTree = "<group>"; };
 		C9F0C1182478283E00993517 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		CDD088152CD89571005FB848 /* WidgetInfo.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WidgetInfo.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 		C94A9EFC241407C30062CDCD /* WidgetInfo */ = {
 			isa = PBXGroup;
 			children = (
+				CDD088152CD89571005FB848 /* WidgetInfo.mm */,
 				C94A9F04241407C30062CDCD /* WidgetInfo.xm */,
 				C94A9F162414081C0062CDCD /* WidgetInfo-Prefix.pch */,
 			);
@@ -361,7 +364,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos\n/opt/iOSOpenDev/bin/iosod --arm64e-legacy-prebuild\n";
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -370,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD088162CD89571005FB848 /* WidgetInfo.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
