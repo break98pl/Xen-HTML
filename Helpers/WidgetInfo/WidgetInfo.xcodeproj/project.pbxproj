@@ -10,7 +10,6 @@
 		C92C796525D837AF00E73E1A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92C796425D837AF00E73E1A /* CoreTelephony.framework */; };
 		C94927872468D58E00B7DF85 /* libMobileGestalt.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C94927862468D58E00B7DF85 /* libMobileGestalt.tbd */; };
 		C94A9EFB241407C30062CDCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94A9EFA241407C30062CDCD /* Foundation.framework */; };
-		C94A9F06241407C30062CDCD /* WidgetInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = C94A9F05241407C30062CDCD /* WidgetInfo.mm */; };
 		C94A9F172414081C0062CDCD /* WidgetInfo-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C94A9F162414081C0062CDCD /* WidgetInfo-Prefix.pch */; };
 		C94A9F2E241408B20062CDCD /* libwidgetinfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C94A9F29241408980062CDCD /* libwidgetinfo.a */; };
 		C94A9F312414093C0062CDCD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94A9F302414093C0062CDCD /* WebKit.framework */; };
@@ -92,7 +91,6 @@
 		C94A9EF7241407C30062CDCD /* XenHTML_WidgetInfo.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = XenHTML_WidgetInfo.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94A9EFA241407C30062CDCD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C94A9F04241407C30062CDCD /* WidgetInfo.xm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WidgetInfo.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		C94A9F05241407C30062CDCD /* WidgetInfo.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WidgetInfo.mm; sourceTree = "<group>"; };
 		C94A9F162414081C0062CDCD /* WidgetInfo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WidgetInfo-Prefix.pch"; sourceTree = "<group>"; };
 		C94A9F23241408980062CDCD /* libwidgetdata.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libwidgetdata.xcodeproj; path = ../../deps/libwidgetinfo/libwidgetdata.xcodeproj; sourceTree = "<group>"; };
 		C94A9F302414093C0062CDCD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -198,7 +196,6 @@
 			isa = PBXGroup;
 			children = (
 				C94A9F04241407C30062CDCD /* WidgetInfo.xm */,
-				C94A9F05241407C30062CDCD /* WidgetInfo.mm */,
 				C94A9F162414081C0062CDCD /* WidgetInfo-Prefix.pch */,
 			);
 			path = WidgetInfo;
@@ -393,7 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C94A9F06241407C30062CDCD /* WidgetInfo.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
