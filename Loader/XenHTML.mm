@@ -1,4 +1,4 @@
-#line 1 "/Users/matt/iOS/Projects/Xen-HTML/Loader/XenHTML.xm"
+#line 1 "/Users/beesmacprom1/Desktop/TweakDev/Xen-HTML/Loader/XenHTML.xm"
 
 
 
@@ -52,10 +52,12 @@ inline BOOL isAtLeastiOSVersion(NSInteger major, NSInteger minor) {
 #define _LOGOS_RETURN_RETAINED
 #endif
 
+asm(".linker_option \"-framework\", \"CydiaSubstrate\"");
+
 @class SpringBoard; 
 static void (*_logos_orig$_ungrouped$SpringBoard$applicationDidFinishLaunching$)(_LOGOS_SELF_TYPE_NORMAL SpringBoard* _LOGOS_SELF_CONST, SEL, id); static void _logos_method$_ungrouped$SpringBoard$applicationDidFinishLaunching$(_LOGOS_SELF_TYPE_NORMAL SpringBoard* _LOGOS_SELF_CONST, SEL, id); 
 
-#line 33 "/Users/matt/iOS/Projects/Xen-HTML/Loader/XenHTML.xm"
+#line 33 "/Users/beesmacprom1/Desktop/TweakDev/Xen-HTML/Loader/XenHTML.xm"
 
 
 static void _logos_method$_ungrouped$SpringBoard$applicationDidFinishLaunching$(_LOGOS_SELF_TYPE_NORMAL SpringBoard* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, id arg1) {
@@ -106,7 +108,7 @@ static __attribute__((constructor)) void _logosLocalCtor_bdbb22fb(int __unused a
     BOOL prefs = [[[NSBundle mainBundle] bundleIdentifier] isEqualToString:@"com.apple.Preferences"];
     
     if (sb) {
-        {Class _logos_class$_ungrouped$SpringBoard = objc_getClass("SpringBoard"); MSHookMessageEx(_logos_class$_ungrouped$SpringBoard, @selector(applicationDidFinishLaunching:), (IMP)&_logos_method$_ungrouped$SpringBoard$applicationDidFinishLaunching$, (IMP*)&_logos_orig$_ungrouped$SpringBoard$applicationDidFinishLaunching$);}
+        {Class _logos_class$_ungrouped$SpringBoard = objc_getClass("SpringBoard"); { MSHookMessageEx(_logos_class$_ungrouped$SpringBoard, @selector(applicationDidFinishLaunching:), (IMP)&_logos_method$_ungrouped$SpringBoard$applicationDidFinishLaunching$, (IMP*)&_logos_orig$_ungrouped$SpringBoard$applicationDidFinishLaunching$);}}
         
         
         if (isAtLeastiOSVersion(13, 0)) {

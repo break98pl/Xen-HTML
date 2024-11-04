@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -1398,7 +1398,6 @@
 				C911F1CE1C1E051300D4D582 /* Frameworks */,
 				C911F1CF1C1E051300D4D582 /* Headers */,
 				C9CD07F42252BADD006C94FF /* Copy for simject if needed */,
-				C9CFA23B25AF787300AC678C /* Legacy arm64e */,
 			);
 			buildRules = (
 			);
@@ -1418,7 +1417,6 @@
 				C94F49D0237DB0B9004A74B0 /* Sources */,
 				C94F49D1237DB0B9004A74B0 /* Frameworks */,
 				C94F49D2237DB0B9004A74B0 /* Headers */,
-				C9E4DF8F25AF5F4F002D9A77 /* Legacy arm64e */,
 			);
 			buildRules = (
 			);
@@ -1454,7 +1452,6 @@
 				C971524B236F88080021277B /* Sources */,
 				C971524C236F88080021277B /* Frameworks */,
 				C971524D236F88080021277B /* Headers */,
-				C9CFA23525AF776800AC678C /* Legacy arm64e */,
 				C9715317236F8F830021277B /* Copy to simject if needed */,
 			);
 			buildRules = (
@@ -1475,7 +1472,6 @@
 				C9F770441C7A459900C52880 /* Sources */,
 				C9F770451C7A459900C52880 /* Frameworks */,
 				C9F770461C7A459900C52880 /* Headers */,
-				C9CFA23625AF777E00AC678C /* Legacy arm64e */,
 			);
 			buildRules = (
 			);
@@ -1640,7 +1636,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos\n/opt/iOSOpenDev/bin/iosod --arm64e-legacy-prebuild\n";
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos\n";
 		};
 		C971524A236F88080021277B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1731,63 +1727,6 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ ${SIMJECT} = \"YES\" ]; then\n\necho \"Automating simject...\"\ncp \"${PROJECT_DIR}/LatestBuild/XenHTML_9to12.dylib\" /opt/simject\nfor dylib in /opt/simject/*.dylib; do ldid -S \"$dylib\"; done\nresim\n\nfi\n";
 		};
-		C9CFA23525AF776800AC678C /* Legacy arm64e */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Legacy arm64e";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/opt/iOSOpenDev/bin/iosod --arm64e-legacy-postbuild\n";
-			showEnvVarsInLog = 0;
-		};
-		C9CFA23625AF777E00AC678C /* Legacy arm64e */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Legacy arm64e";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/opt/iOSOpenDev/bin/iosod --arm64e-legacy-postbuild\n";
-			showEnvVarsInLog = 0;
-		};
-		C9CFA23B25AF787300AC678C /* Legacy arm64e */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Legacy arm64e";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/opt/iOSOpenDev/bin/iosod --arm64e-legacy-postbuild\n";
-			showEnvVarsInLog = 0;
-		};
 		C9CFA23C25AF99D600AC678C /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1805,26 +1744,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/opt/iOSOpenDev/bin/iosod --arm64e-legacy-prebuild\n";
-			showEnvVarsInLog = 0;
-		};
-		C9E4DF8F25AF5F4F002D9A77 /* Legacy arm64e */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Legacy arm64e";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/opt/iOSOpenDev/bin/iosod --arm64e-legacy-postbuild\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

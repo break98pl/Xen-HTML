@@ -250,7 +250,6 @@
 				C94A9EF1241407C30062CDCD /* Sources */,
 				C94A9EF2241407C30062CDCD /* Frameworks */,
 				C94A9EF3241407C30062CDCD /* Headers */,
-				C9CFA23825AF77A700AC678C /* Legacy arm64e */,
 			);
 			buildRules = (
 			);
@@ -363,25 +362,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos\n/opt/iOSOpenDev/bin/iosod --arm64e-legacy-prebuild\n";
-		};
-		C9CFA23825AF77A700AC678C /* Legacy arm64e */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Legacy arm64e";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/opt/iOSOpenDev/bin/iosod --arm64e-legacy-postbuild\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 

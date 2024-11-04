@@ -1,4 +1,4 @@
-#line 1 "/Users/matt/iOS/Projects/Xen-HTML/Helpers/WebGL/WebGL/WebGL.xm"
+#line 1 "/Users/beesmacprom1/Desktop/TweakDev/Xen-HTML/Helpers/WebGL/WebGL/WebGL.xm"
 #import "XENWGResources.h"
 
 
@@ -42,29 +42,31 @@ static process_name_t* (*CA$Render$Context$process_name)(void *_this);
 #define _LOGOS_RETURN_RETAINED
 #endif
 
+asm(".linker_option \"-framework\", \"CydiaSubstrate\"");
+
 @class CAContext; 
 
 
-#line 23 "/Users/matt/iOS/Projects/Xen-HTML/Helpers/WebGL/WebGL/WebGL.xm"
+#line 23 "/Users/beesmacprom1/Desktop/TweakDev/Xen-HTML/Helpers/WebGL/WebGL/WebGL.xm"
 
 
-__unused static BOOL (*_logos_orig$backboardd$lookup$__ZN2CA6Render6Update24allowed_in_secure_updateEPNS0_7ContextEPKNS0_9LayerHostE)(void *_this, void *context, const void *var2 ); __unused static BOOL _logos_function$backboardd$lookup$__ZN2CA6Render6Update24allowed_in_secure_updateEPNS0_7ContextEPKNS0_9LayerHostE(void *_this, void *context, const void *var2 ) {
-    
-    if (CA$Render$Context$process_name != NULL) {
-        
-        
-        process_name_t *process_name = CA$Render$Context$process_name(context);
-        
-        
-        
-        
-        if (process_name->length == 115) {
-            return YES;
-        }
-    }
 
-    return _logos_orig$backboardd$lookup$__ZN2CA6Render6Update24allowed_in_secure_updateEPNS0_7ContextEPKNS0_9LayerHostE(_this, context, var2);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -104,10 +106,10 @@ static __attribute__((constructor)) void _logosLocalCtor_7ea7e065(int __unused a
             return;
         
         XENlog(@"DEBUG :: initialising hooks");
-        { MSHookFunction((void *)MSFindSymbol(NULL, "__ZN2CA6Render6Update24allowed_in_secure_updateEPNS0_7ContextEPKNS0_9LayerHostE"), (void *)&_logos_function$backboardd$lookup$__ZN2CA6Render6Update24allowed_in_secure_updateEPNS0_7ContextEPKNS0_9LayerHostE, (void **)&_logos_orig$backboardd$lookup$__ZN2CA6Render6Update24allowed_in_secure_updateEPNS0_7ContextEPKNS0_9LayerHostE);}
+        {}
     } else if (webProcess) {
         XENlog(@"DEBUG :: initialising hooks");
         
-        {Class _logos_class$WebContent$CAContext = objc_getClass("CAContext"); Class _logos_metaclass$WebContent$CAContext = object_getClass(_logos_class$WebContent$CAContext); MSHookMessageEx(_logos_metaclass$WebContent$CAContext, @selector(remoteContextWithOptions:), (IMP)&_logos_meta_method$WebContent$CAContext$remoteContextWithOptions$, (IMP*)&_logos_meta_orig$WebContent$CAContext$remoteContextWithOptions$);}
+        {Class _logos_class$WebContent$CAContext = objc_getClass("CAContext"); Class _logos_metaclass$WebContent$CAContext = object_getClass(_logos_class$WebContent$CAContext); { MSHookMessageEx(_logos_metaclass$WebContent$CAContext, @selector(remoteContextWithOptions:), (IMP)&_logos_meta_method$WebContent$CAContext$remoteContextWithOptions$, (IMP*)&_logos_meta_orig$WebContent$CAContext$remoteContextWithOptions$);}}
     }
 }

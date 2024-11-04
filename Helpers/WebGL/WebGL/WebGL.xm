@@ -22,23 +22,23 @@ static process_name_t* (*CA$Render$Context$process_name)(void *_this);
 
 %group backboardd
 
-%hookf(BOOL, "__ZN2CA6Render6Update24allowed_in_secure_updateEPNS0_7ContextEPKNS0_9LayerHostE", void *_this, void *context /* CA::Render::Context* */, const void *var2 /* CA::Render::LayerHost */) {
-    
-    if (CA$Render$Context$process_name != NULL) {
-        // 2f is == '/'
-        // <78d515ec 01000000 01000000 17000000 2f757372 ...>
-        process_name_t *process_name = CA$Render$Context$process_name(context);
-        
-        // Trying to access 'name' results in a segfault... UaF?
-        
-        // /System/Library/Frameworks/WebKit.framework/XPCServices/com.apple.WebKit.WebContent.xpc/com.apple.WebKit.WebContent
-        if (process_name->length == 115) {
-            return YES;
-        }
-    }
-
-    return %orig(_this, context, var2);
-}
+//%hookf(BOOL, "__ZN2CA6Render6Update24allowed_in_secure_updateEPNS0_7ContextEPKNS0_9LayerHostE", void *_this, void *context /* CA::Render::Context* */, const void *var2 /* CA::Render::LayerHost */) {
+//    
+//    if (CA$Render$Context$process_name != NULL) {
+//        // 2f is == '/'
+//        // <78d515ec 01000000 01000000 17000000 2f757372 ...>
+//        process_name_t *process_name = CA$Render$Context$process_name(context);
+//        
+//        // Trying to access 'name' results in a segfault... UaF?
+//        
+//        // /System/Library/Frameworks/WebKit.framework/XPCServices/com.apple.WebKit.WebContent.xpc/com.apple.WebKit.WebContent
+//        if (process_name->length == 115) {
+//            return YES;
+//        }
+//    }
+//
+//    return %orig(_this, context, var2);
+//}
 
 %end
 
