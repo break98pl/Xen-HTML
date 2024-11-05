@@ -6,3 +6,4 @@ Working/
 Concepts/
 
 .theos
+*.dylib

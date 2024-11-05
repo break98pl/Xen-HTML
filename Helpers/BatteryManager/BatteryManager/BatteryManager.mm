@@ -160,7 +160,7 @@ static BOOL isModerateStrategyPossible = YES;
 
 asm(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class WKWebView; @class XENHWidgetController; @class UIApp; 
+@class WKWebView; @class UIApp; @class XENHWidgetController; 
 
 
 #line 139 "/Users/beesmacprom1/Desktop/TweakDev/Xen-HTML/Helpers/BatteryManager/BatteryManager/BatteryManager.xm"

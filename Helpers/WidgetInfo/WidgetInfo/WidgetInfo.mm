@@ -53,7 +53,7 @@ static int springboardLaunchToken;
 
 asm(".linker_option \"-framework\", \"CydiaSubstrate\"");
 
-@class XIWidgetManager; @class WKWebView; @class SpringBoard; 
+@class SpringBoard; @class WKWebView; @class XIWidgetManager; 
 static void (*_logos_orig$_ungrouped$WKWebView$evaluateJavaScript$completionHandler$)(_LOGOS_SELF_TYPE_NORMAL WKWebView* _LOGOS_SELF_CONST, SEL, NSString *, void (^)(id, NSError *error)); static void _logos_method$_ungrouped$WKWebView$evaluateJavaScript$completionHandler$(_LOGOS_SELF_TYPE_NORMAL WKWebView* _LOGOS_SELF_CONST, SEL, NSString *, void (^)(id, NSError *error)); static NSMutableDictionary* (*_logos_orig$_ungrouped$XIWidgetManager$_populateWidgetSettings)(_LOGOS_SELF_TYPE_NORMAL XIWidgetManager* _LOGOS_SELF_CONST, SEL); static NSMutableDictionary* _logos_method$_ungrouped$XIWidgetManager$_populateWidgetSettings(_LOGOS_SELF_TYPE_NORMAL XIWidgetManager* _LOGOS_SELF_CONST, SEL); 
 
 #line 32 "/Users/beesmacprom1/Desktop/TweakDev/Xen-HTML/Helpers/WidgetInfo/WidgetInfo/WidgetInfo.xm"

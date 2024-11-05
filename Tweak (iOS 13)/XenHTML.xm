@@ -2623,7 +2623,7 @@ static BOOL launchCydiaForSource = NO;
 
 // See: https://github.com/WebKit/webkit/blob/master/Source/WebKit/UIProcess/WebsiteData/WebDeviceOrientationAndMotionAccessController.cpp
 // Also: https://github.com/WebKit/webkit/blob/master/Source/WebCore/dom/DeviceOrientationOrMotionPermissionState.h
-enum class DeviceOrientationOrMotionPermissionState : uint8_t { Granted, Denied, Prompt };
+//enum class DeviceOrientationOrMotionPermissionState : uint8_t { Granted, Denied, Prompt };
 //%hookf(DeviceOrientationOrMotionPermissionState, "__ZNK6WebKit45WebDeviceOrientationAndMotionAccessController33cachedDeviceOrientationPermissionERKN7WebCore18SecurityOriginDataE", void *_this, void *originData) {
 //    return DeviceOrientationOrMotionPermissionState::Granted;
 //}
@@ -2647,6 +2647,25 @@ enum class DeviceOrientationOrMotionPermissionState : uint8_t { Granted, Denied,
 }*/
 
 %end
+
+%hook SBIconController
+- (void)viewWillDisappear:(BOOL)animated {
+    %orig;
+    if(sbhtmlViewController)
+    [sbhtmlViewController unloadWidgets];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    %orig;
+    if(sbhtmlViewController){
+        dispatch_time_t delay = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 1);
+        dispatch_after(delay, dispatch_get_main_queue(), ^(void){
+            [sbhtmlViewController reloadWidgets:NO];
+        });
+    }
+}
+%end
+
 
 #pragma mark Initialisation and Settings callbacks
 
